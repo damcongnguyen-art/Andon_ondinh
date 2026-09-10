@@ -1,0 +1,6 @@
+{
+  "name": "Giám Sát Sản Lượng & Bộ Đếm nguyen",
+  "description": "Hệ thống giám sát sản lượng các dây chuyền sản xuất Ariston và bộ đếm tăng sản lượng nguyen chu kỳ 60 phút chạy ngầm 24/7 trên Cloud.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

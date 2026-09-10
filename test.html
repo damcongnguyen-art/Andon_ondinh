@@ -1,0 +1,1472 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    
+    
+    <meta http-equiv='content-type' content='text/html; charset=utf-8' />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+    <title tkey="tit"></title>
+    <link rel="manifest" href="/manifest-tv.json">
+    
+    
+    <!-- kendo fiori css -->
+    <link rel="icon" href="" type="image/x-icon" class="logo-icon" />
+    <link href="/libs/kendo/styles/kendo.common-fiori.min.css" rel="stylesheet" />
+    <link href="/libs/kendo/styles/kendo.fiori.min.css" rel="stylesheet" />
+    <!-- bootstrap css -->
+    <link href="/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/libs/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    
+    <link href="/Content/Common/fts.kendo.css" rel="stylesheet" />
+        <script type="text/javascript">
+        window.MenuId = '';
+        window.langCode = 'VN';
+        localStorage.setItem("lang", 'VN');
+        window.keylang = '';
+        window.langResource = {
+  "Job": {
+    "num_ASM_RO_TYPE_ALLOC": "Cấp phát Tài sản",
+    "num_ASM_RO_TYPE_BORROW": "Mượn Tài sản",
+    "num_ASM_RO_TYPE_LIQ": "Thanh lý Tài sản",
+    "num_ASM_RO_TYPE_P_LIQ": "Chuẩn bị thanh lý Tài sản",
+    "num_ASM_RO_TYPE_RETURN": "Trả Tài sản",
+    "num_ASM_RO_TYPE_STUS": "Đổi trạng thái tài sản",
+    "num_CHECK_IN_OUT_MAP": "Chấm công",
+    "num_CONTRACT_EVALUATION": "Đánh giá HĐLĐ sắp hết hạn",
+    "num_EMPLOYEE_LEAVE": "Đăng ký chế độ",
+    "num_HR_ASSET_ROTATION": "Điều chuyển Tài sản",
+    "num_HR_ASSETS_DETAIL": "Chi tiết tài sản",
+    "num_HR_PLAN_OVERTIME": "Đăng ký tăng ca",
+    "num_HR_REQUEST_ERR": "Bổ sung giờ chấm lỗi",
+    "num_HR_TRAVEL_BUSSINESS": "Đăng kí học tập, công tác",
+    "num_HR_VM_REGISTER": "Đăng ký xin xe",
+    "num_HR_WORK_ONLINE": "Đăng ký làm việc online",
+    "num_HRM_JOB": "Quản lý công việc",
+    "num_JOB_REQUEST": "Đề xuất công việc",
+    "num_OT_PLAN": "Kế hoạch tăng ca",
+    "num_OT_REAL": "Thực tế tăng ca",
+    "num_REC_CANDIDATE": "Tuyển dụng ứng viên",
+    "num_REC_REQUEST_ORG": "Yêu cầu tuyển dụng",
+    "num_OVERTIME_NEW_V1": "Đăng ký làm thêm giờ",
+    "num_OT_NEW_V1_DETAIL": "Xác nhận làm thêm giờ",
+    "btn_ChangePass": "Đổi mật khẩu",
+    "btn_SignOut": "Đăng xuất",
+    "MSG_TRANSACTION_VEHICLE_COMFIRM_FINISH": "Phương tiện di chuyển đã đc xác nhận",
+    "MSG_VEHICLE_NOT_APPROVED_YET": "Đơn chưa duyệt! Phương tiện không được xác nhận",
+    "MSG_YOU_NOT_VEHICLE_COMFIRM": "Bạn không có quyền xác nhận Phương tiện",
+    "MSG_VEHICLE_COMFIRM_SUCCESS": "Xác nhận phương tiện đã di chuyển"
+  },
+  "Menu": {
+    "mnu_MNU_INDEX": "",
+    "mnu_MNU_HRM_INFO": "",
+    "mnu_MNU_EMPLOYEE": "",
+    "mnu_MNU_EMPLOYEE_CONTACTS": "",
+    "mnu_MNU_HRM_TIME": "",
+    "mnu_MNU_HR_SHIFT_PLAN": "",
+    "mnu_MNU_INFO_DAY": "",
+    "mnu_MNU_TIME_WORK_V3": "",
+    "mnu_MNU_CHECK_IO_REG": "",
+    "mnu_MNU_EDITCHECK_IO": "",
+    "mnu_MNU_HISTORY_IO": "",
+    "mnu_MNU_LEAVE_REG": "",
+    "mnu_MNU_LEAVE_HOUR_REGISTRATION": "",
+    "mnu_MNU_OVERTIME_REG": "",
+    "mnu_MNU_JOB_TRAN_PERSONAL": "",
+    "mnu_MNU_CHECK_IO_APP": "",
+    "mnu_MNU_LEAVE_APP": "",
+    "mnu_MNU_LEAVE_HOUR_APPROVAL": "",
+    "mnu_MNU_OT_APPROVE": "",
+    "mnu_MNU_PMS": "",
+    "mnu_MNU_TR_TASK": "",
+    "mnu_MNU_TIME_REPORT": "TimeSheet",
+    "mnu_MNU_TR_PROJECT": "",
+    "mnu_MNU_HRM_SA": "",
+    "mnu_MNU_PAYSLIP": "",
+    "mnu_MNU_SYSTEM": "",
+    "mnu_MNU_SYSTEM_VAR": "",
+    "mnu_MNU_JOB_TRAN_CONFIG_MULTIPLE": "",
+    "mnu_MNU_HR_TIME_CHECKIN_POINT": "",
+    "mnu_MNU_JOB_TRAN": "",
+    "mnu_MNU_JOB_TRAN_CONFIG": "",
+    "mnu_MNU_JOB_TRAN_GROUP": "",
+    "mnu_MNU_SYS_TRAN": "",
+    "mnu_Identity_card": "",
+    "mnu_code_MNU_BI_DASHBOARD": "",
+    "mnu_title_MNU_BI_DASHBOARD": "Biểu đồ phân tích",
+    "mnu_code_MNU_EMPLOYEE_DASHBOARD": "",
+    "mnu_title_MNU_EMPLOYEE_DASHBOARD": "Thông tin cá nhân",
+    "mnu_MNU_EMP_DASHBOARD": "Bảng tin",
+    "mnu_MNU_EMPLOYEE_PROFILE": "Hồ sơ",
+    "mnu_MNU_EMP_PROFILE_EDIT": "Cập nhật hồ sơ",
+    "mnu_MNU_EMP_CONTACT": "Danh bạ",
+    "mnu_MNU_EMP_ATTENDANCE": "Chấm công",
+    "mnu_MNU_APPLY_LEAVES": "Đơn chế độ",
+    "mnu_MNU_APPLY_OVERTIME": "Đơn tăng ca",
+    "mnu_MNU_APPLY_PLAN_OVERTIME": "Kế hoạch tăng ca theo tổ",
+    "mnu_MNU_APPLY_VEHICLE": "Phương tiện đi lại",
+    "mnu_MNU_EMP_PAYSLIPS": "Phiếu lương ",
+    "mnu_MNU_OFM_CATERING_REGISTER": "Đăng ký cơm",
+    "mnu_MNU_APPLY_FEEDBACK": "Phản hồi-góp ý",
+    "mnu_MNU_PLAN_SHIFT_PERSONAL": "Kế hoạch ca làm việc                           ",
+    "mnu_code_MNU_HR_DASHBOARD": "",
+    "mnu_title_MNU_HR_DASHBOARD": "Quản lý nhân sự",
+    "mnu_MNU_HR_DASHBOARD_INDEX": "Bảng tin",
+    "mnu_MNU_HR_EMPLOYEE": "Nhân sự",
+    "mnu_MNU_HR_EMPLIST": "Danh sách người lao động",
+    "mnu_MNU_HR_PROFILE_APPLICATIONS": "Đơn cập nhật hồ sơ                                                ",
+    "mnu_MNU_HR_ATTENDANCE": "Thời gian làm việc",
+    "mnu_MNU_HR_ATTENDANCE_LIST": "Chấm công",
+    "mnu_MNU_LEAVE_APPLICATION": "Đơn chế độ",
+    "mnu_MNU_OVERTIME_APPLICATION": "Đơn tăng ca",
+    "mnu_MNU_OVERTIME_PLAN_APPLICATION": "Kế hoạch tăng ca",
+    "mnu_MNU_HR_SHIFT_PLAN_NEW": "Kế hoạch ca làm việc ",
+    "mnu_MNU_VEHICLE_APPLICATION": "Phương tiện di chuyển",
+    "mnu_MNU_HR_DANHMUC": "Danh mục",
+    "mnu_MNU_DM_NATIONALITY": "Quốc tịch",
+    "mnu_MNU_DM_ETHNICS": "Dân tộc",
+    "mnu_MNU_DM_RELIGION": "Tôn giáo",
+    "mnu_MNU_DM_PROVINCES": "Tỉnh/Thành phố",
+    "mnu_MNU_DM_DISTRICTS": "Quận/Huyện",
+    "mnu_MNU_DM_COMMUNES": "Phường/Xã",
+    "mnu_MNU_DM_EDUCATION": "Trình độ học vấn",
+    "mnu_MNU_DM_HR_EDUCATION_STATUS": "Tình trạng học vấn",
+    "mnu_MNU_DM_CERTIFICATION": "Bằng cấp/chứng chỉ",
+    "mnu_MNU_DM_DOCUMENT": "Tài liệu                                            ",
+    "mnu_MNU_DM_CABINET": "Lưu trữ hồ sơ",
+    "mnu_MNU_DM_POLICY": "Chính sách",
+    "mnu_MNU_DM_EVALUATION_PROBATION": "Đánh giá thử việc",
+    "mnu_MNU_DM_HR_RELATIONSHIP": "Mối quan hệ",
+    "mnu_MNU_DM_GROUP_REWARDS_FAULTS": "Tiêu chí đánh giá",
+    "mnu_MNU_DM_EMPLOYEE_STATUS": "Trạng thái nhân viên",
+    "mnu_MNU_DM_GROUP_POSITION": "Nhóm chức vụ",
+    "mnu_MNU_POSITION": "Chức vụ",
+    "mnu_MNU_DM_EMPLOYEE_LEVEL": "Cấp bậc",
+    "mnu_MNU_DM_CONTRACT_TYPE": "Loại hợp đồng",
+    "mnu_MNU_DM_GROUP_SALARY": "Nhóm lương",
+    "mnu_MNU_DM_HR_GROUP_SALARY": "Bậc lương/hệ số lương",
+    "mnu_MNU_DM_PR_REASON": "Lý do thay đổi vị trí lương",
+    "mnu_MNU_HR_EMPLOYEE_SIGN": "Chữ ký nhân viên",
+    "mnu_MNU_HR_VM_VEHICLE": "Phương tiện",
+    "mnu_code_MNU_TASK_DASHBOARD": "",
+    "mnu_title_MNU_TASK_DASHBOARD": "Quản lý công việc-dự án",
+    "mnu_MNU_GANTT_TASK_ASSIGN": "Tiếp nhận công việc",
+    "mnu_MNU_DM_PROJECT_LIST": "Tạo dự án-yêu cầu công việc",
+    "mnu_code_MNU_PROJECT_DASHBOARD": "",
+    "mnu_title_MNU_PROJECT_DASHBOARD": "Dự án",
+    "mnu_code_MNU_EVALUATION_DASHBOARD": " ",
+    "mnu_title_MNU_EVALUATION_DASHBOARD": "Quản lý đánh giá",
+    "mnu_MNU_EVALUATION_DM": "Khai báo danh mục KPI",
+    "mnu_MNU_EXPIRE_KPI": "Hạn nộp đánh giá",
+    "mnu_MNU_DM_EVALUATION_KPI_GROUP": "Nhóm KPI                                                ",
+    "mnu_MNU_DM_KPI_CLASS": "Lớp KPI",
+    "mnu_MNU_DM_KPI": "Danh mục KPI",
+    "mnu_MNU_HR_POSITION_KPI": "Phân quyền đánh giá thẳng",
+    "mnu_MNU_POSITION_SETUP_KPI": "Thiết lập tiêu chí KPI",
+    "mnu_MNU_EVALUATION_CONTRACT_RENEWAL": "Đánh giá gia hạn HĐ",
+    "mnu_MNU_CONTRACT_KPI_POSITION": "Tiêu chí gia hạn hợp đồng",
+    "mnu_MNU_EMPLOYEE_CONTRACRT_EXPIRE": "Danh sách HĐLĐ",
+    "mnu_MNU_EMPLOYEE_CONFIM_EVA_CONTRACT": "Nhân viên xác nhận HĐLĐ",
+    "mnu_MNU_HR_CONTRACT_EVALUATION_APPROVAL_PT": "Duyệt đánh giá GHHĐ",
+    "mnu_MNU_EVALUATION_BY_POSITION_0": "II. Đánh giá theo chức vụ",
+    "mnu_MNU_KPI_EVALUATION_0": "Thực hiện đánh giá",
+    "mnu_MNU_KPI_APPROVAL_0": "Phê duyệt đánh giá",
+    "mnu_MNU_KPI_SUMMARY_0": "Xem tổng hợp KPI",
+    "mnu_MNU_KPI_SEARCH_0": "Tra cứu danh sách đánh giá",
+    "mnu_code_MNU_JOB_DASHBOARD": "",
+    "mnu_title_MNU_JOB_DASHBOARD": "Dữ liệu công việc",
+    "mnu_code_MNU_OFM_DASHBOARD": " ",
+    "mnu_title_MNU_OFM_DASHBOARD": "Văn phòng số",
+    "mnu_MNU_DM_ROOM_MEETING": " Danh sách phòng họp                                            ",
+    "mnu_MNU_ROOM_MEETING": "                    Lịch họp                                            ",
+    "mnu_MNU_OFM_CATERING_REG_MAN": "     Duyệt đăng ký cơm                                            ",
+    "mnu_MNU_CATERING_IN_DAY": "             Nhân viên ăn trong ngày                                            ",
+    "mnu_MNU_UPLOAD_DOC": "Cập nhật công văn tài liệu                              ",
+    "mnu_MNU_DOC_LOOKUP": "Tra cứu công văn tài liệu                                      ",
+    "mnu_MNU_HR_FEEDBACK": "  Phản hồi                                            ",
+    "mnu_code_MNU_TRANNING_DASHBOARDS": "",
+    "mnu_title_MNU_TRANNING_DASHBOARDS": "Quản lý đào tạo",
+    "mnu_MNU_DOCUMENT_CATEGORY": "Hạng mục tài liệu",
+    "mnu_MNU_TRAINING_CATEGORY": "Hạng mục đào tạo                                                ",
+    "mnu_MNU_TITLE_DOCUMENT_TRAINING": "Tiêu đề tài liệu soạn thảo",
+    "mnu_MNU_DM_CONTENT_TRAINING": "Soạn thảo tài liệu",
+    "mnu_code_MNU_ADMIN": "",
+    "mnu_title_MNU_ADMIN": "Cấu hình hệ thống",
+    "mnu_MNU_SYS_MENU": "                Menu   ",
+    "mnu_MNU_SYS_SYSTEMVAR": "           Biến hệ thống                                            ",
+    "mnu_MNU_JOB_TRAN_GROUP_0": "                  Job Tran Group                                            ",
+    "mnu_MNU_JOB_TRAN_0": "      Job Tran                                            ",
+    "mnu_MNU_JOB_TRAN_CONFIG_0": "           Job Tran Config                                            ",
+    "mnu_MNU_JOB_TRAN_STATUS": "      Job Tran Status                                            ",
+    "mnu_MNU_SYS_TEMPLATE": "        Sys Template                                            ",
+    "mnu_MNU_HR_TIME_CHECKIN_POINT_0": "          Local check-in                                            ",
+    "mnu_MNU_SYS_FCM_TEMPLATE": "                    Mẫu tin nhắn                                            ",
+    "mnu_MNU_LOG_ERROR_0": "        Error Log                                            ",
+    "mnu_MNU_HRM_BI_CHART": "          Nghiệp vụ chart                                            ",
+    "mnu_MNU_SYS_GROUP_MANAGER": "                Nhóm quản lý                                            ",
+    "mnu_MNU_HR_MANAGER_ORGANIZATION": "                 Quản lý phòng ban                                            ",
+    "mnu_MNU_SYS_APP_CONFIG": "              API Config (app)                                            ",
+    "mnu_MNU_DOCUMENT_APPROVED": "                Phê duyệt tài liệu                                                ",
+    "mnu_MNU_TRAINING_DOCUMENT": "Nội dung đào tạo",
+    "mnu_MNU_DOCUMENT_EDIT": "                       Khai báo nội dung đào tạo                                                ",
+    "mnu_MNU_BI_HR_DASHBOARD": "Thông tin nhân sự",
+    "mnu_MNU_BI_SA_DASHBOARD": "Thông tin tiền lương",
+    "mnu_MNU_BI_TIME_DASHBOARD": "Thông tin thời gian",
+    "mnu_MNU_DOCUMENT_POSITION": "                        Khai báo nội dung theo vị trí                                                ",
+    "mnu_MNU_DM_LECTURER": "           Danh mục giảng viên đào tạo                                                ",
+    "mnu_MNU_DM_TRAINING_CLASS": "Tạo lớp đào tạo",
+    "mnu_MNU_TRAINING_EMPLOYEE": "         Danh sách học viên                                                ",
+    "mnu_MNU_TRAINING_EMP_VIEW": "         Nhân viên xác nhận kế hoạch                                                ",
+    "mnu_MNU_TRAINING_MNG_VIEW": "           Xác nhận kế hoạch đào tạo                                                ",
+    "mnu_MNU_TRAINING_SUMMARY": "            Tổng hợp khóa đào tạo                                                ",
+    "mnu_code_MNU_QUEST_AND_TEST": "",
+    "mnu_title_MNU_QUEST_AND_TEST": "Quản lý đào tạo",
+    "mnu_MNU_QS_TEST_RATE": "       Tỉ lệ điểm câu hỏi                                            ",
+    "mnu_MNU_DM_QUESTION": "          Danh sách câu hỏi                                            ",
+    "mnu_MNU_DM_EXAM_LIST": "            Danh sách đề thi                                            ",
+    "mnu_MNU_TRAINING_TEST": "       Bài kiểm tra đào tạo                                            ",
+    "mnu_MNU_HISTORY_EXAM": "         Chấm điểm - Lịch sử thi                                            ",
+    "mnu_MNU_ZALO_USERID": "          Zalo UserId                                            ",
+    "mnu_MNU_QUEST_AND_TEST": "Thi trắc nghiệm",
+    "mnu_MNU_BI_TRAINING_DASHBOARD": "                                                Training  Statistical                                            ",
+    "mnu_code_MNU_NEWS_DASHBOARD": "",
+    "mnu_title_MNU_NEWS_DASHBOARD": "Tin tức- Thông báo",
+    "mnu_MNU_APPLY_NOTIFICATION": " Cập nhật tin tức- sự kiện",
+    "mnu_MNU_PUBLISH_NOTIFICATION": "Duyệt tin thức",
+    "mnu_MNU_SEARCH_NOTIFICATION": "Tin tức- sự kiện nội bộ                   ",
+    "mnu_MNU_NOTIFICATION_GROUP": "Tạo nhóm                                    ",
+    "mnu_code_MNU_REPORT_DASHBOARD": "",
+    "mnu_title_MNU_REPORT_DASHBOARD": "Báo cáo tổng hợp",
+    "mnu_MNU_TRAINING_DIRECTORY": "Danh mục đào tạo",
+    "mnu_MNU_DM_HR_GROUP_TRAINING": "                                                    Danh mục nhóm đào tạo                                                ",
+    "mnu_MNU_DM_HR_IMPLEMENT_FORM": "                                                    Danh mục hình thức đào tạo                                                ",
+    "mnu_MNU_DM_HR_PURPOSE_TRAINING": "                                                    Mục đích đào tạo                                                ",
+    "mnu_MNU_DM_HR_PARTNER_TRAINING": "                                                    Danh mục đối tác đào tạo                                                ",
+    "mnu_MNU_DM_HR_LEVEL_TRAINING": "                                                    Danh mục level đào tạo                                                ",
+    "mnu_MNU_DM_HR_GROUP_LEVEL_TRAINING": "                                                    Danh mục nhóm level đào tạo                                                ",
+    "mnu_MNU_DM_CONTENT_EVALUATION_TRAINING": "                                                    Tiêu chí đánh giá đào tạo                                                ",
+    "mnu_MNU_HR_CHECK_INOUT": "                                                    Bổ sung giờ chấm                                                ",
+    "mnu_code_MNU_SALARY_DASHBOARD": "",
+    "mnu_title_MNU_SALARY_DASHBOARD": "Quản lý tiền lương",
+    "mnu_MNU_TTM_DASHBOAD": "Quản lý công",
+    "mnu_MNU_APPROVAL_TIMEKEEPING": "                                                    Duyệt bảng công                                                ",
+    "mnu_MNU_APPROVAL_TIMESKEEPING_ORG": "                                                    Duyệt bảng công full                                                ",
+    "mnu_MNU_PRM_DASHBOAD": "Quản lý lương",
+    "mnu_MNU_APPROVAL_PAYROLL": "                                                    Duyệt bảng lương                                                ",
+    "mnu_MNU_APPROVAL_PAYROLL_ORG": "                                                    Duyệt bảng lương full                                                ",
+    "mnu_code_MNU_TIME_MAN": "",
+    "mnu_title_MNU_TIME_MAN": "Quản lý chấm công",
+    "mnu_code_MNU_PMS_DASHBOARD": "",
+    "mnu_title_MNU_PMS_DASHBOARD": "QL Thời gian dự án",
+    "mnu_MNU_PMS_DM": "Danh mục PMS",
+    "mnu_MNU_TR_CLIENT_V2": "Danh mục khách hàng",
+    "mnu_MNU_TR_PROJECT_V2": "                                                    Danh mục dự án                                                ",
+    "mnu_MNU_TR_TASK_V2": "                                                    Danh mục Task                                                ",
+    "mnu_MNU_TIMEREPORT": "                                                Time Report                                            ",
+    "mnu_MN_TIMEREPORT_APP": "                                                Time Report Apporval                                            ",
+    "mnu_SYS_CHECKIN_API_KEY": "                                                Google map API key                                            ",
+    "mnu_MNU_BI_ASSETS_DASHBOARD": "                                                Thống kê tài sản                                            ",
+    "mnu_MNU_LEAVE_BY_HOUR_APPLY": "                                                Đơn chế độ theo giờ                                            ",
+    "mnu_MNU_ISSUE_PLACE": "                                                    Issue place                                                ",
+    "mnu_MNU_HR_LEAVE_BY_HOUR": "                                                    Duyệt đơn chế độ theo giờ                                                ",
+    "mnu_code_MNU_ASSETS_DASHBOARD": "",
+    "mnu_title_MNU_ASSETS_DASHBOARD": "Quản lý tài sản",
+    "mnu_MNU_ASSETS_FILE_MANAGE": "Hồ sơ tài sản",
+    "mnu_MNU_ASSETS_MANAGE": "                                                    Lập hồ sơ                                                ",
+    "mnu_MNU_ASSETS_POSTION": "                                                    Tính khấu hao và Thống kê TS                                                ",
+    "mnu_MNU_ASSETS_DEP_INFO": "                                                    Đánh giá lại TS                                                ",
+    "mnu_MNU_ASSETS_DEP_RATIO": "                                                    Hệ số khấu hao điều chỉnh                                                ",
+    "mnu_MNU_ASSETS_SUMMARY": "                                                Tổng hợp tài sản                                            ",
+    "mnu_MNU_ASSETS_MAINTENANCE_PLAN": "QL Bảo dưỡng-Bảo trì",
+    "mnu_MNU_ASSETS_MAINTENANCE_YEAR": "                                                    KH Bảo dưỡng năm                                                ",
+    "mnu_MNU_ASSETS_MAINTENANCE_MONTH": "                                                    KH Bảo dưỡng tháng                                                ",
+    "mnu_MNU_ASSETS_MAINTENANCE_LOG": "                                                    Nhật ký bảo dưỡng                                                ",
+    "mnu_MNU_ASSETS_MAINTENACE_DAILY": "                                                    Nhật ký hàng ngày                                                ",
+    "mnu_MNU_ASSETS_MAINTENACE_COST": "                                                    Đơn giá bảo dưỡng                                                ",
+    "mnu_MNU_ASSETS_WARRANTY": "QL Bảo hành",
+    "mnu_MNU_AS_WARRANTY_APPLY": "                                                    Yêu cầu bảo hành                                                ",
+    "mnu_MNU_AS_WARRANTY_APPROVED": "                                                    Duyệt yêu cầu                                                ",
+    "mnu_MNU_AS_INSPECTION_MNG": "Quản lý kiểm định",
+    "mnu_MNU_AS_VERIFICATION_YEAR": "                                                    Kế hoạch kiểm định                                                ",
+    "mnu_MNU_ASSETS_INVENTORY": "Kiểm kê tài sản",
+    "mnu_MNU_ASSETS_CONFIG": "                                                    Cấu hình kiểm kê                                                ",
+    "mnu_MNU_ASSETS_INVENTORY_PERIODIC": "                                                    Kiểm kê định kỳ                                                ",
+    "mnu_MNU_ASSETS_INVENTORY_PERIODIC_APPROVED": "                                                    Duyệt kiểm kê định kỳ                                                ",
+    "mnu_MNU_ASSETS_INVENTORY_WEIRDO": "                                                    Kiểm kê bất thường                                                ",
+    "mnu_MNU_ASSETS_INVENTORY_WEIRDO_APPROVED": "                                                    Duyệt kiểm kê bất thường                                                ",
+    "mnu_MNU_ASSETS_PROPOSE": "Luân chuyển tài sản",
+    "mnu_MNU_AS_ROTATION": "                                                    Assets Rotation                                                ",
+    "mnu_MNU_AS_ROTATION_ALLOC": "                                                    Cấp phát                                                ",
+    "mnu_MNU_AS_ROTATION_P_LIQ": "                                                    Assets Pre Liquidation                                                ",
+    "mnu_MNU_AS_ROTATION_LIQ": "                                                    Assets Liquidation                                                ",
+    "mnu_MNU_AS_ROTATION_STATUS": "                                                    Thay đổi trạng thái tài sản                                                ",
+    "mnu_MNU_AS_ROTATION_BORR": "                                                    Mượn tài sản                                                ",
+    "mnu_MNU_AS_ROTATION_RETURN": "                                                    Trả tài sản                                                ",
+    "mnu_MNU_ASSETS_ROTATION_APPROVAL": "                                                    Assets Rotation Approval                                                ",
+    "mnu_MNU_ASSETS_CATEGORY": "Danh mục tài sản",
+    "mnu_MNU_ASSETS_TYPE": "                                                    Loại tài sản                                                ",
+    "mnu_MNU_ASSETS_GROUP": "                                                    Nhóm tài sản                                                ",
+    "mnu_MNU_ASSETS_UNIT": "                                                    Đơn vị tính                                                ",
+    "mnu_MNU_ASSETS_SOURCE": "                                                    Nguồn gốc tài sản                                                ",
+    "mnu_MNU_ASSETS_SUPPLIER": "                                                    Nhà cung cấp                                                ",
+    "mnu_MNU_DM_ASSETS_TASK_DAILY": "                                                    Danh mục công việc hàng ngày                                                ",
+    "mnu_MNU_AS_CONSTRUCTION_LEVEL": "                                                    Danh mục cấp công trình                                                ",
+    "mnu_MNU_ASSETS_VEHICLE_BRAND": "                                                    Danh mục hãng phương tiện                                                ",
+    "mnu_MNU_ASSETS_VEHICLE_MODEL": "                                                    Danh mục phương tiện                                                ",
+    "mnu_MNU_DM_ASSETS_VENDOR": "                                                    Danh mục nhà cung cấp dịch vụ                                                ",
+    "mnu_MNU_TASK_DASHBOARD_INDEX": "Dashboard",
+    "mnu_MNU_DM_GROUP_TASK": "Nhóm công việc",
+    "mnu_MNU_TASK_PROGRESS": "Thực hiện công việc",
+    "mnu_code_MNU_UNIFORM_MAN": "",
+    "mnu_title_MNU_UNIFORM_MAN": "Quản lý đồng phục",
+    "mnu_MNU_UNIFORM_APP": "                                                Duyệt đồng phục                                            ",
+    "mnu_MNU_UNIFORM_REG": "Đăng ký cấp phát đồng phục ",
+    "mnu_MNU_APPLY_LEAVE_EARLY": "                                                Đăng ký đi muộn về sớm                                            ",
+    "mnu_MNU_HR_EMPLOYEE_STATUS_OFF_REG": "Đơn xin nghỉ việc                                   ",
+    "mnu_MNU_APPLY_SALARY_ADVANCE_RQ": "                                                Đăng ký ứng lương                                            ",
+    "mnu_MNU_HR_EMPLOYEE_STATUS_OFF_APP": "                                                    Duyệt đơn xin nghỉ                                                 ",
+    "mnu_MNU_DM_HR_LEAVE_REASON": "                                                    Leave Reason                                                ",
+    "mnu_MNU_LEAVE_EARLY_APP": "                                                    Duyệt đi muộn về sớm                                                ",
+    "mnu_MNU_SALARY_MNG": "Quản lý ứng lương",
+    "mnu_MNU_PR_SA_ADVANCE_CONFIG": "                                                    Cấu hình ứng lương                                                ",
+    "mnu_MNU_APPLICATION_PR_SALARY_ADVANCE_RQ": "                                                    Duyệt đơn ứng lương                                                ",
+    "mnu_MNU_PR_SALARY_ADVANCE_PAYMENT": "                                                    Thanh toán ứng lương                                                ",
+    "mnu_MNU_COMPOSITE_DASHBOARD": "Tổng hợp",
+    "mnu_MNU_APPLY_ASSETS_REPAIR": "                                                    Yêu cầu sửa chữa                                                ",
+    "mnu_MNU_ASSETS_REPAIR_APPROVED": "                                                    Duyệt yêu cầu sửa chữa                                                ",
+    "mnu_MNU_ASSETS_REPAIR_MANAGER": "                                                    Quản lý đơn sửa chữa                                                ",
+    "mnu_MNU_AS_WARRANTY_MNG": "                                                    Danh sách thời hạn bảo hành                                                ",
+    "mnu_code_MNU_MANUFACTURE": "",
+    "mnu_title_MNU_MANUFACTURE": "Quản trị sản xuất",
+    "mnu_MNU_MES_PO": "                                                Danh sách đơn hàng                                            ",
+    "mnu_MNU_MES_ITEM_STEP": "                                                Danh sách công đoạn                                            ",
+    "mnu_MNU_MES_PLAN_NO": "                                                Kế hoạch sản xuất                                            ",
+    "mnu_MNU_MES_PLAN_STEP_FINISH": "                                                Sp hoàn thành                                            ",
+    "mnu_MNU_JOB_ASSIGN": "                                                Thông tin giao việc                                            ",
+    "mnu_MNU_MES_WORKIN_DAY": "                                                Công nhật,công tác                                            ",
+    "mnu_MNU_LIST_DM_MANUFACTURE": "Danh mục",
+    "mnu_MNU_DM_EXPENSE_CLASS": "                                                    Lớp chi phí                                                ",
+    "mnu_MNU_DM_ITEM": "                                                    Danh sách sản phẩm                                                ",
+    "mnu_MNU_DM_STYLE": "                                                    Danh mục kiểu dáng                                                ",
+    "mnu_MNU_DM_ITEM_TYPE": "                                                    Loại sản phẩm                                                 ",
+    "mnu_MNU_DM_ITEM_CLASS": "                                                    Nhóm sản phẩm                                                ",
+    "mnu_MNU_DM_COLOR": "                                                    Danh mục màu                                                ",
+    "mnu_MNU_DM_SIZE": "                                                    Danh mục size                                                ",
+    "mnu_MNU_DM_MATERIAL": "                                                    Nguyên vật liệu                                                ",
+    "mnu_MNU_DM_MATERIAL_GROUP": "                                                    Nhóm nguyên vật liệu                                                ",
+    "mnu_MNU_DM_POSITION_MATERIAL": "                                                    Vị trí nvl                                                ",
+    "mnu_MNU_PR_PAYROLL_STEP_CONFIG": "                                                Phân quyền duyệt lương                                            ",
+    "mnu_MNU_NEWS_DASHBOARD": "Tin tức nội bộ",
+    "mnu_MNU_BI_STATISTIC_EMP_YEAR": "                                                Báo cáo biến động nhân sự theo năm                                            ",
+    "mnu_MNU_BI_STATISTIC_EMP_BY_ORG": "                                                Báo cáo biến động nhân viên theo phòng ban                                            ",
+    "mnu_code_MNU_RECUITMENT_DASHBOARD": "",
+    "mnu_title_MNU_RECUITMENT_DASHBOARD": "Tuyển dụng",
+    "mnu_MNU_APPLY_RECRUITMENT": "I.1 Yêu cầu tuyển dụng",
+    "mnu_MNU_APPLICATION_RECRUITMENT": "I.2 Duyệt yêu cầu tuyển dụng",
+    "mnu_MNU_BI_WORKING_YEAR_STATISTIC": "                                                Thống kê thâm niên lao động                                            ",
+    "mnu_MNU_BI_EMPLOYEE_DASHBOARD": "                                                Thống kê nhân viên                                            ",
+    "mnu_MNU_BI_WORKING_AGE": "                                                Thống kê độ tuổi lao động                                            ",
+    "mnu_MNU_EVALUATION_KPI": "Đánh giá KPI",
+    "mnu_MNU_EVALUATION_KPI_CROSS": "                                                    Đánh giá chéo                                                ",
+    "mnu_MNU_HR_EMP_KPI_NEW": "                                                    Tự đánh giá KPI                                                ",
+    "mnu_MNU_APPLY_RE_RECOMMENDATION_YEAR": "                                                Đề xuất kế hoạch                                            ",
+    "mnu_MNU_HR_RE_RECOMMENDATION": "                                                Duyệt kế hoạch đề xuất                                            ",
+    "mnu_MNU_DM_RECRUITMENT": "Danh mục",
+    "mnu_MNU_DM_REQUEST_RECRUITMENT": "                                                    Câu hỏi đăng ký tuyển dụng                                                ",
+    "mnu_MNU_DM_LIST_RECRUITMENT": "                                                    Danh mục đợt tuyển dụng                                                ",
+    "mnu_MNU_DM_RECRUITMENT_CHANNEL": "                                                    Danh mục kênh tuyển dụng                                                ",
+    "mnu_MNU_DM_CANDIDATE_CRITERIA": "                                                    Tiêu chí đánh giá ứng viên                                                ",
+    "mnu_MNU_DM_CRITERIA_RECRUITMENT": "                                                    Danh mục yêu cầu tuyển dụng                                                ",
+    "mnu_MNU_DM_HR_REQUEST_REASON": "                                                    Danh mục lý do yêu cầu tuyển dụng                                                ",
+    "mnu_MNU_DM_INTERVIEW_CONTENT": "                                                    Nội dung thi tuyển dụng                                                ",
+    "mnu_MNU_RECRUITMENT_MNG": "Quản lý",
+    "mnu_MNU_HR_SETUP_REQUEST_RECRUIMENT": "Câu hỏi phỏng vấn mặc định",
+    "mnu_MNU_HR_CANDIDATE_PROFILE": "                                                    Hồ sơ ứng viên                                                ",
+    "mnu_MNU_HR_RECRUITMENT_POSITION": "                                                    Vị trí ứng tuyển                                                ",
+    "mnu_MNU_HR_CANDIDATES_POSITION_VIEW": "                                                    Sàng lọc - Phê duyệt                                                ",
+    "mnu_MNU_HR_RECRUITMENT_CHANNELS": "                                                    Quản lý chi phí tuyển dụng                                                ",
+    "mnu_MNU_HR_REC_JOBDECREPTION_NEW": "                                                    Mô tả công việc                                                ",
+    "mnu_MNU_HR_REC_REQUEST_NEW": "                                                    Phân quyền phê duyệt tuyển dụng                                                ",
+    "mnu_MNU_HR_PERMISSION_REC_APPRVAL": "                                                    Phân quyền duyệt ứng tuyển                                                ",
+    "mnu_MNU_HR_KPI_POINT": "                                                    Danh mục điểm                                                 ",
+    "mnu_MNU_EVA_KPI_NEW": "Đánh giá KPI",
+    "mnu_MNU_HR_EMP_KPI_NEW_APP": "                                                    Duyệt đánh giá kpi                                                ",
+    "mnu_MNU_DOCMAN": "Tài liệu-văn bản-công văn",
+    "mnu_MNU_STATIONERY": "                                                Văn phòng phẩm                                            ",
+    "mnu_MNU_MEALMAN": "QL Suất ăn",
+    "mnu_code_MNU_EX_MAN": "",
+    "mnu_title_MNU_EX_MAN": "Quản trị chi phí",
+    "mnu_MNU_EX_PLAN": "                                                Kế hoạch chi phí chung                                            ",
+    "mnu_MNU_PR_PLAN": "                                                Kế hoạch chi phí tiền lương                                            ",
+    "mnu_MNU_EXP_DETAIL": "                                                Quản lý chi phí hàng năm                                            ",
+    "mnu_MNU_BI_AVERGARE_INCOME": "                                                Thống kê bình quân thu nhập                                            ",
+    "mnu_MNU_APPLY_OVERTIME_REGISTER": "Import đơn tăng ca",
+    "mnu_MNU_RQ_ADVANCE_PAYMENT": "Tạm ứng/Thanh toán chi phí",
+    "mnu_MNU_APPLY_ADVANCE_REQUEST": "                                                    Đề xuất tạm ứng                                                ",
+    "mnu_MNU_APPLY_PAYMENT_REQUEST": "                                                    Đề xuất thanh toán                                                ",
+    "mnu_MNU__EVALUATION_CLASSIFICATION": "                                                    Đánh giá điểm                                                ",
+    "mnu_MNU_HR_EMP_KPI_NEW_GENERAL": "                                                    Tổng hợp KPI đánh giá                                                ",
+    "mnu_MNU_RQ_ADVANCE_APPROVAL": "                                                Duyệt đề xuất tạm ứng                                            ",
+    "mnu_MNU_DM_EXPENSE_MAN": "Danh mục chi phí",
+    "mnu_MNU_DM_EX_MAN": "                                                    Chi phí                                                ",
+    "mnu_MNU_RQ_ADVANCE_PAYMENT_MNG": "Quản lý tạm ứng/thanh toán",
+    "mnu_MNU_RQ_PAYMENT_APPROVAL": "                                                    Duyệt đề xuất thanh toán                                                ",
+    "mnu_MNU_ADVANCE_PAYMENT_LIST": "                                                    Danh sách đơn tạm ứng/thanh toán                                                ",
+    "mnu_MNU_EX_DM_EXPENSE_CLASS": "                                                    Nhóm chi phí                                                ",
+    "mnu_MNU_EX_DM_EXPENSE_CLASS1": "                                                    Loại chi phí                                                ",
+    "mnu_MNU_EX_TR_CLIENT": "Danh mục khách hàng",
+    "mnu_MNU_EX_TR_PROJECT": "Danh mục dự án                                    ",
+    "mnu_MNU_BI_STRATEGIC_STAFFING": "                                                Định biên quân số                                            ",
+    "mnu_MNU_HR_BI_SUMMARY_DASHBOARD": "Biểu đồ tổng quan nhân sự",
+    "mnu_MNU_EVALUATION_CONTRACT_NEW": "Đánh giá hợp đồng",
+    "mnu_MNU_SELF_EVALUATION_CONTRACT": "                                                    Tự đánh giá HĐ                                                ",
+    "mnu_MNU_HRM_JOB_POSITION_LEVEL": "Mô tả công việc theo chức danh                                         ",
+    "mnu_DM_PR_HR_ORGANIZATION": "Danh sách phòng ban",
+    "mnu_MNU_KPI_SPACE": "                                                ------------1 KPI ----------                                            ",
+    "mnu_MNU_HR_CONTRACT_EVA_APPROVAL_NEW": "                                                    Duyệt GHHD New                                                ",
+    "mnu_MNU_ASK_SPACE": "                                                ------------ 2. ASK ------------                                            ",
+    "mnu_MNU_DM_ASK": "Khai báo danh mục ASK",
+    "mnu_MNU_DM_HR_ASK": "                                                    Khung năng lực                                                ",
+    "mnu_MNU_DM_HR_ASK_GROUP": "                                                    Nhóm khung năng lực                                                ",
+    "mnu_MNU_HR_ASK_LEVEL": "                                                    Cấp độ năng lực                                                ",
+    "mnu_MNU_HR_ASK_POSITION": "                                                    ASK Position                                                ",
+    "mnu_MNU_EVA_ASK": "Đánh giá ASK",
+    "mnu_MNU_MBO_SPACE": "                                                ------------ 3. MBO ----------                                            ",
+    "mnu_MNU_BI_MES_DASHBOARD": "                                                Biểu đồ                                            ",
+    "mnu_MNU_PER_VIEW_TV": "                                                Báo cáo năng suất                                            ",
+    "mnu_MNU_MES_BOM": "2. Lập định mức ",
+    "mnu_MNU_MES_ORDER_MAN": "1. Lập đơn hàng-yêu cầu sản xuất",
+    "mnu_MNU_PR_ITEM_DATE_IN": "                                                    Ngày vào chuyền                                                ",
+    "mnu_MNU_PR_ITEM_PLAN": "                                                    Phân bổ số lượng                                                ",
+    "mnu_MNU_MES_QTY_BY_DAY": "                                                    Kế hoạch theo ngày                                                ",
+    "mnu_MNU_MES_ITEM_DONE": "3. Sản phẩm hoàn thành",
+    "mnu_MNU_QC_CHECK_QTY": "                                                    QC cập nhật sản lượng                                                ",
+    "mnu_MNU_MES_PRODUCT_QTY_CHECK": "                                                    Sản lượng theo mốc giờ                                                ",
+    "mnu_MNU_DM_UNIT": "                                                    Danh mục đvt                                                ",
+    "mnu_DM_MES_TIMELINE": "                                                    Danh mục mốc giờ                                                ",
+    "mnu_MNU_BI_RECRUITMENT_RESULT": "                                                Thống kê kết quả tuyển dụng                                            ",
+    "mnu_MNU_HR_EMPLOYEE_SITUASION_V2": "                                                Diễn biến quân số                                            ",
+    "mnu_MNU_PR_EMPOLYEE_SALARY": "                                                Bảng lương cá nhân                                            ",
+    "mnu_MNU_LEAVE_ALL": "Đơn từ- chế độ",
+    "mnu_MNU_JOB_TRAN_DELEGATION": "                                                Ủy quyền                                            ",
+    "mnu_MNU_REPORT_PERSONAL": "Báo cáo cá nhân",
+    "mnu_MNU_RP_PERSON_SALARY": "                                                    Báo cáo lương cá nhân                                                ",
+    "mnu_MNU_RP_PERSON_WORK": "                                                    Báo cáo công cá nhân                                                ",
+    "mnu_MNU_EVALUATION_ASK": "                                                Đánh giá ASK                                            ",
+    "mnu_MNU_EVALUATION_OKR": "                                                Đánh giá OKR                                            ",
+    "mnu_MNU_DT_DISCIPLINE_EMPLOYEE": "                                                Thông tin biên bản xử lý                                            ",
+    "mnu_MNU_EOFFICE": "Thủ tục hành chính",
+    "mnu_MNU_OFM_MEAIL_GUEST": "                                                    Đăng ký cơm (khách hàng)                                                ",
+    "mnu_MNU_CERTIFICATION_EMPLOYEE": " Chứng chỉ cần có",
+    "mnu_MNU_HR_RECRUITMENT_NEW": "                                                Khai báo đợt vào vị trí TD                                            ",
+    "mnu_MNU_HR_BI_STRATEGIC_STAFFING": "II.Quản lý định biên quân số",
+    "mnu_MNU_APPLY_RECRUITMENT_JOB": "III.1 Tạo đợt tuyển dụng",
+    "mnu_MNU_DM_RECRUITMENT_ROUND_POSITION": "                                                    Vòng tuyển dụng theo vị trí                                                ",
+    "mnu_MNU_HR_CANDIDATES_INTERVIEW_SCHEDULE": "                                                    Lịch Phỏng vấn                                                ",
+    "mnu_MNU_EMPLOYEE_INSURANCE": "Quản lý Bảo hiểm SK",
+    "mnu_MNU_DM_INSURANCE": "                                                    Danh sách bảo hiểm                                                ",
+    "mnu_MNU_DM_INSURANCE_CARD": "                                                    Hạng thẻ                                                ",
+    "mnu_MNU_EMP_INSURANCE": "                                                    Quản lý thẻ Bảo Hiểm                                                ",
+    "mnu_MNU_HR_EMPLIST_CARD": "                                                    Danh sách nhân viên                                                ",
+    "mnu_MNU_CERTIFICATION_MANAGER": "Quản lý chứng chỉ",
+    "mnu_MNU_CERTIFICATION_GROUP": "Khai báo nhóm chứng chỉ",
+    "mnu_MNU_CERTIFICATE_EMP_VIEW": " Bảng thống kê chứng chỉ nhân viên",
+    "mnu_MNU_CERTIFICATION_DOCUMENT": "Khai báo nội dung đào tạo cấp chứng chỉ",
+    "mnu_MNU_HR_CERTIFICATION_VIEW": " Bảng thống kê chứng chỉ theo phòng ban",
+    "mnu_MNU_HR_CERTIFICATION_POSITION": "Khai báo chứng chỉ theo vị trí/phòng ban",
+    "mnu_MNU_DM_HR_TABLE_REQUIRE": "                                                    Cấu hình thông tin hồ sơ bắt buộc                                                ",
+    "mnu_MNU_DM_SENIORITY_YEAR": "                                                    Danh mục thâm niên                                                ",
+    "mnu_MNU_DM_WELCOME_STEP": "                                                    Welcome step                                                ",
+    "mnu_MNU_HRM_FUNC_PR_ORG": "                                                    Chức năng phòng ban                                                ",
+    "mnu_MNU_REASON_ERR_TIMESHEET": "                                                    Lý do bổ sung giờ chấm                                                ",
+    "mnu_MNU_HR_TIME_ATTENDANCE": "                                                Bảng công                                            ",
+    "mnu_MNU_HR_TIME_WORK": "                                                Thời gian làm việc                                            ",
+    "mnu_MNU_PR_PAYROLL_TIMEKEEPING": "                                                    Lịch sử duyệt lương                                                ",
+    "mnu_MNU_DM_CLASSIFICATION_LEVEL": "                                                    Phân cấp đánh giá                                                ",
+    "mnu_MNU_EVALUATION_STATICS": "                                                    Thống kê đánh giá kpi                                                ",
+    "mnu_MNU_HR_ASK_TRAN_APP": "                                                    Duyệt đánh giá ASK                                                ",
+    "mnu_MNU_HR_ASK_TRAN_GENERAL": "                                                    Tổng hợp ASK                                                ",
+    "mnu_MNU_TRAINING_CONTENT_V2": "                                                    Danh mục nội dung đào tạo                                                ",
+    "mnu_MNU_DM_GROUP_PROJECT": "Nhóm dự án",
+    "mnu_MNU_DM_TASK_TMP": "Khai công việc theo nhóm",
+    "mnu_MNU_TASK_APPROVAL": "Duyệt kết quả công việc",
+    "mnu_MNU_PMS_DASHBOARD": "Timesheet theo thời gian",
+    "mnu_MNU_OFM_GUEST_HOUSE": "Quản lý nhà khách",
+    "mnu_MNU_OFM_BLOCK": "                                                    Danh mục khu nhà khách                                                ",
+    "mnu_MNU_OFM_FLOOR": "                                                    Danh mục tầng nhà khách                                                ",
+    "mnu_MNU_OFM_CHEKING_ROOM": "Quản lý tình trạng phòng",
+    "mnu_MNU_OFM_ROOM": "                                                    Danh mục phòng nhà khách                                                ",
+    "mnu_MNU_OFM_TRAN_BOOKING": "                                                    Đặt phòng nhà khách                                                ",
+    "mnu_MNU_OFM_TRAN_BOOKING_APP": "                                                    Duyệt nhà khách                                                ",
+    "mnu_MNU_STATIONERY_BY_YEAR": "                                                    Báo cáo sử dụng văn phòng phẩm theo năm                                                ",
+    "mnu_MNU_DM_OFM_ITEM": "                                                    Danh sách văn phòng phẩm                                                ",
+    "mnu_MNU_DM_OFM_ITEM_GROUP": "                                                    Danh sách nhóm văn phòng phẩm                                                ",
+    "mnu_MNU_OFM_PLAN_STATIONERY": "                                                    Định mức văn phòng phẩm                                                ",
+    "mnu_MNU_OFM_TRAN_STATIONERY": "                                                    Cấp phát văn phòng phẩm                                                ",
+    "mnu_MNU_STATISTICS_MEAL": "                                                    Thống kê suất ăn                                                ",
+    "mnu_MNU_DM_MEAL_ITEM": "                                                    Danh mục thành phần món ăn                                                ",
+    "mnu_MNU_OFM_MEAIL_GUEST_APP": "                                                    Duyệt đăng ký cơm(khách hàng))                                                ",
+    "mnu_MNU_DM_GROUP_MEAL_ITEM": "                                                    Danh mục nhóm thành phần                                                ",
+    "mnu_MNU_OFM_MEAL_FAC": "                                                    Danh sách suất ăn                                                ",
+    "mnu_MNU_DISCIPLINARY_TREAT": "Quản lý theo dõi kỷ luật      ",
+    "mnu_MNU_BREACH_OF_DISCIPLINARY": "                                                    Tạo biên bản vi phạm                                                ",
+    "mnu_MNU_DT_DASHBOARD": "Màn hình tổng quan                             ",
+    "mnu_MNU_MINUTES_MEETING": "                                                    Biên bản họp                                                ",
+    "mnu_MNU_LINE_BALANCE": "4.Cân bằng chuyền",
+    "mnu_MNU_IMPORT_TMP_PRINT": "                                                Mẫu excel                                            ",
+    "mnu_MNU_DM_TEMPALTE": "                                                Import Template                                            ",
+    "mnu_MNU_SEC_USER_WEB": "                                                Tài khoản người dùng                                            ",
+    "mnu_MNU_SEC_USER_GROUP": "                                                Nhóm người dùng                                            ",
+    "mnu_MNU_ACTIVEKEY_DEVICE_USER": "                                                Kích hoạt thiết bị truy cập                                            ",
+    "mnu_MNU_MANAGER_RE_REQUEST": "I.3. Quản lý yêu cầu tuyển dụng",
+    "mnu_MNU_HR_RECRUITMENT_JOB": "III.2 Quản lý các đợt tuyển dụng",
+    "mnu_MNU_EVALUATION_PROFILE": "                                                    Đánh giá hồ sơ                                                ",
+    "mnu_MNU_DM_CERTIFICATION_PROJECT": "                                                    Danh mục chứng chỉ theo dự án                                                ",
+    "mnu_MNU_HR_CERTIFICA_EXPIREDATE": "                                                    Danh sách chứng chỉ hết hạn                                                ",
+    "mnu_MNU_EMP_INSURANCE_V2": "                                                    Thống kê thẻ bảo hiểm                                                ",
+    "mnu_MNU_HIS_CRITERIA": "                                                    Tiêu chí sức khỏe                                                ",
+    "mnu_MNU_HIS_CRITERIA_GROUP": "        Nhóm tiêu chí khám",
+    "tit": "Tin tức- sự kiện nội bộ                   ",
+    "pageTitle": "Announcement",
+    "lbl_group_notify": "Group",
+    "lbl_notice_board": "Notice Board",
+    "STORAGE_CONFIG": "Khu vực lưu trữ",
+    "btn_Choose": "Chọn",
+    "lbl_view_all": "<< View all",
+    "lbl_file_attach": "file đính kèm",
+    "mnu_MNU_HR_HEALTH_MAN": "Quản lý sức khoẻ",
+    "mnu_MNU_DM_PROJECT_EMPLOYEE": "                                                    Nhân viên theo dự án                                                ",
+    "mnu_MNU_HIS_CRITERIA_EXPIRED": " Quản lý hết hạn GKSK",
+    "mnu_MNU_SWITCH_SHIFT_PLAN": "                                                Duyệt đề xuất đổi ca                                            ",
+    "mnu_MNU_HR_EMP_KPI_NEW_BY_YEAR": "Bảng KPI cả năm",
+    "mnu_MNU_DM_MBO": "Khai báo danh mục MBO",
+    "mnu_MNU_BI_REC_DASHBOARD": "                                                Dashboard Tuyển dụng                                            ",
+    "mnu_MNU_STATUS_HR_REQUIRE": "                                                Trạng thái cập nhật Hồ sơ                                            ",
+    "mnu_MNU_DM_CERTIFICATE_RATE": "                                                    Danh mục tỉ lệ chứng chỉ                                                 ",
+    "mnu_MNU_HR_CERTIFICATE_POSITION": "                                                    Chứng chỉ theo chức vụ                                                ",
+    "mnu_MNU_DM_TRAINING_DASHBOARD": "                                                Training dashboard                                            ",
+    "mnu_MNU_TRAIN_CLASS_APPLICATION": "                                                    Duyệt lớp đào tạo                                                ",
+    "mnu_MNU_TRAINING_CLASS": "                                                    Danh sách lớp đào tạo                                                ",
+    "mnu_MNU_TRAINING_COSTS": "                                                    Danh sách chi phí đào tạo                                                ",
+    "mnu_MNU_TECH_INSPECT_ASSETS": "Kiểm tra tài sản hàng ngày",
+    "mnu_MNU_AS_ROTATION_BUY": "                                                    Mua tài sản                                                ",
+    "mnu_MNU_OFM_WORK_INFO": "Quản lý khách ra vào ",
+    "mnu_MNU_OFM_GUEST_WORK_CHART": "                                                    Biểu đồ theo dõi khách ra vào                                                ",
+    "mnu_MNU_OFM_GUARD_BOOKING": "                                                    Quản lý khách vào của bảo vệ                                                ",
+    "mnu_MNU_OFM_GUEST_CARD_WITH_IMG": "                                                    Thẻ khách ra vào                                                 ",
+    "mnu_MNU_OFM_APPROVE_BOOKING_FOR_WORK": "                                                    Duyệt đơn đặt lịch khách đến                                                ",
+    "mnu_MNU_OFM_BOOKING_FOR_WORK": "                                                    Đặt lịch khách làm việc                                                ",
+    "mnu_MNU_UPLOAD_DOC_V2": "                                                    Upload tài liệu v2                                                ",
+    "mnu_MNU_SYS_RQ_RESET_ACCOUNT": "                                                Yêu cầu cấp lại tài khoản                                            ",
+    "mnu_MNU_CALENDAR_TRAVELBUSSINESS": "Lịch công tác học tập                                            ",
+    "mnu_MNU_HR_EMPLOYEE_JOB_TRAN_REG": "                                                    Đăng ký xin nghỉ                                                ",
+    "mnu_MNU_SELF_EVALUATION_MBO": "                                                Đánh giá MBO                                            ",
+    "mnu_MNU_DM_EMPLOYEE_PERMISSION_APPROVAL": "                                                    Phân quyền trưởng phòng                                                ",
+    "mnu_MNU_DEPART_EVA_MBO": "                                                    Mục tiêu phòng ban                                                ",
+    "mnu_MNU_DM_MBO_GROUP": "                                                    Danh mục Nhóm MBO                                                ",
+    "mnu_MNU_APPLY_WORKONLINE": "Đăng ký làm việc online",
+    "mnu_MNU_HR_VOTE": "Quản lý khảo sát nhân viên",
+    "mnu_MNU_AVANI_DANHMUC": "Danh mục",
+    "mnu_MNU_DM_CONFIGURATION": "Cấu hình",
+    "mnu_MNU_DM_PRODUCT": "Sản phẩm",
+    "mnu_title_MNU_AVANI_DASHBOARDS": "Trang chủ",
+    "mnu_title_MNU_AVANI_PLAN": "Kế hoạch",
+    "mnu_MNU_MONITER_FACTORY": "Theo dõi tổng thể",
+    "mnu_MNU_MONITER_LINE_1": "Dây chuyền 15L ",
+    "mnu_MNU_MONITER_LINE_4": "Dây chuyền 30L ",
+    "mnu_MNU_REPORT_LINE": "Thiết lập thông tin"
+  },
+  "": null
+};
+        window.JsonPage = {};
+        window.DefaultModule = 'PORTAL';
+        window.DefaultGui = '0';
+        window.TextJob = function (key) {
+            const node = "Job";
+            if (window.langResource && window.langResource[node] && window.langResource[node][key]) {
+                return window.langResource[node][key]
+            }
+            let elements = document.querySelectorAll(`#${key}[class="cls-job"]`);
+            if (elements.length > 0) {
+                return elements[0].innerText;
+            }
+            return (window[key] && window[key].innerText) ? window[key].innerText : "";
+        }
+        window.TextMenu = function (key) {
+            const node = "Menu";
+            if (window.langResource && window.langResource[node] && window.langResource[node][key]) {
+                return window.langResource[node][key]
+            }
+            let elements = document.querySelectorAll(`[tkey="${key}"]`);
+            if (elements.length > 0) {
+                return elements[0].innerText;
+            }
+            return "";
+        }
+        window.TextKey = function (key) {
+            const node = window.keylang;
+            if (window.langResource && window.langResource[node] && window.langResource[node][key]) {
+                return window.langResource[node][key]
+            }
+            else {
+                let elements = document.querySelectorAll(`[tkey="${key}"]`);
+                if (elements.length > 0) {
+                    return elements[0].innerText;
+                }
+                //if (window[key]) {
+                //    return (window[key].innerText) ? window[key].innerText : "";
+                //}
+                //else {
+                //    let elements = document.querySelectorAll(`[tkey="${key}"]`);
+                //    if (elements.length > 0) {
+                //        return elements[0].innerText;
+                //    }
+                //}
+            }
+            return "";
+        }
+        sessionStorage.setItem("NUM_FALSE_CAPCHA", "3");
+        sessionStorage.setItem("LIMITED_DEVICE", "3");
+        sessionStorage.setItem("IS_CHECK_LOGIN_OTP", "0");
+        sessionStorage.setItem("IS_CHECK_LOGIN_CAPTCHA", "0");
+        sessionStorage.setItem("IS_CHECK_LOGIN_KEY_MAC", "0");
+        sessionStorage.setItem("BellVersion", "0");
+    </script>
+
+
+    <!-- jquery script -->
+    <script src="/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="/Scripts/jquery.signalR-2.4.1.min.js"></script>
+    <script src="/libs/kendo/js/jszip.min.js"></script>
+    <!-- kendo script -->
+    <script src="/libs/kendo/js/kendo.all.min.js"></script>
+    <script src='/Scripts/Common/kendo.web.ext.js?v=20.08.2026'></script>
+    <script src="/libs/kendo/js/cultures/kendo.culture.vi-VN.min.js"></script>
+    <script src="/libs/kendo/js/messages/kendo.messages.vi-VN.min.js"></script>
+    <script src="/libs/kendo/js/cultures/kendo.culture.en-US.min.js"></script>
+    <script src="/libs/kendo/js/messages/kendo.messages.en-US.min.js"></script>
+    
+    <script src='/Scripts/JsBase/Functions.js?v=20.08.2026.15'></script>
+    <script src='/Scripts/JsBase/SystemVar.js?v=20.08.2026' type="text/javascript"></script>
+    <script src='/Scripts/JsBase/SysMessage.js?v=20.08.2026' type="text/javascript"></script>
+    <script src='/Scripts/JsBase/Base.js?v=20.08.2026'></script>
+    <script src='../../../Scripts/Common/lang.js?v=20.08.2026' type="text/javascript"></script>
+    <script type="text/javascript">
+
+        //Initial load of page
+        $(function () {
+            if (localStorage.lang === "vi" || localStorage.lang === "VN")
+                kendo.culture("vi-VN");
+            else if (localStorage.lang === "CN")
+                kendo.culture("zh-CN");
+            else if (localStorage.lang === "JP")
+                kendo.culture("ja-JP");
+            else
+                kendo.culture("en-US");
+
+            if (localStorage.getItem('id') === "" ||
+                localStorage.getItem('id') === null ||
+                localStorage.getItem('id') === undefined) {
+                localStorage.setItem('id', kendo.guid());
+            }
+            if (localStorage.lang === "" ||
+            localStorage.lang === "vi" ||
+            localStorage.lang === "en" ||
+            localStorage.lang === null ||
+            localStorage.lang === undefined)
+            {
+                localStorage.setItem("lang", 'VN');
+            }
+            localStorage.setItem("langlist", 'VN,EN');
+            sessionStorage.setItem("LANGUAGE_LIST", 'VN,EN');
+            sessionStorage.setItem("DEFAULT", 'PORTAL');
+            sessionStorage.setItem("USER_ID", '');
+            sessionStorage.setItem("USER_NAME", '');
+            sessionStorage.setItem("EMPLOYEE_ID", '');
+            sessionStorage.setItem("ORGANIZATION_ID", '');
+            sessionStorage.setItem("PR_ORGANIZATION_ID", '');
+            sessionStorage.setItem("USER_GROUP_ID", '');
+            sessionStorage.setItem("USER_TYPE", '');
+            sessionStorage.setItem("COMPANY_NAME", '');
+            sessionStorage.setItem("ORGANIZATION_NAME", '');
+            sessionStorage.setItem("API_HTTP", '');
+            sessionStorage.setItem("FTSVNCUSTOMER", '');
+            UserInfo();
+            kendo.culture(SystemVar.LangID);
+
+            //if ('serviceWorker' in navigator)
+            //{
+            //    navigator.serviceWorker.register('/sw-tv.js')
+            //        .then(function (registration) {
+            //            console.log('Registration successful, scope is:', registration.scope);
+            //        }).catch(function (err) {
+            //            console.error('Service worker registration failed, error:', err);
+            //        });
+            //}
+            //Lấy thôgn tin dịch cả view tv
+            var Lang = { LangCode: "", Hash: "", LangJS: {} };
+            if (Lang.Hash == undefined || Lang.Hash == "" || Lang.Hash == null) {
+                if (sessionStorage.DEFAULT && sessionStorage.DEFAULT === "PORTAL")
+                    Lang.Hash = window.MenuId;
+                else
+                    Lang.Hash = InitHash();
+            }
+            Lang.LangCode = localStorage.getItem("lang");
+            window.hash = Lang.Hash;
+            window.langCode = Lang.LangCode;
+            InitTranslate($("[tkey]").not("[tkey^='mnu_']"), window.langResource, Lang.Hash);
+        });
+
+        function sizeContent() {
+            var height = $(window).height() - $("#info").outerHeight() - $("#footer").outerHeight() - $("#box_header").outerHeight();
+            $("#content").height(height);
+        }
+        function logout() {
+            $.post("/Login/Logout", function (data) {
+                if (data == "True") {
+                    sessionStorage.clear();
+                    $("#tv").loading(true);
+                    $("#tv").load(window.location.href, function (r, s, x) {
+                        $("#tv").loading(false);
+                    });
+                }
+            });
+        }
+        $.getJSON('/JsonFile/getJson',
+            {
+                hash: "LoginPage",
+                langUrl: '../Widget/default/' + 'default.json'
+            },
+            function (rs) {
+                const json = rs["LoginPage"];
+                let bien0 = "logo-icon";
+                if (json[bien0] !== undefined && json[bien0] !== null) {
+                    json[bien0] = JSON.parse(json[bien0]);
+                    $("." + bien0).each(function () {
+                        if (json[bien0]["href"]) {
+                            $(this).attr("href", json[bien0]["href"]);
+                        }
+                    });
+                }
+            },
+            function (x) { d.reject(x); }
+        );
+    </script>
+</head>
+<body oncontextmenu="return false" id="MainLayout" class="no-skin">
+    <div class="main-container wrapper" id="main-container">
+        <div class="main-content @*content-wrapper*@">
+            <section id="content" class="content" style=" padding: 0 0;">
+                
+
+
+<style>
+    .dayPetro {
+        color: red;
+        font-size: 2.6vh;
+        font-weight: bold;
+    }
+
+    .viewTitle {
+        overflow: auto;
+        margin-top: 1vh;
+        background-color: #0000cc;
+        color: white;
+        padding-left: 1vh;
+        height: 10%
+    }
+
+    .table > tbody > tr > td {
+        padding: 0.8vh;
+        border: 2px solid #fff;
+        vertical-align: middle;
+        color: black;
+        background-color: #e9ebf5;
+        font-size: 2vh
+    }
+
+    .table > thead > tr > td {
+        padding: 0.8vh;
+        border: 2px solid #fff;
+        vertical-align: middle;
+        color: black;
+        background-color: #e9ebf5;
+        font-size: 2vh;
+        font-weight: 600
+    }
+
+    .titleCenter {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center
+    }
+
+    .colorQueue {
+        color: #ed8c04;
+    }
+
+    .headerStatus {
+        width: 100%;
+        height: 6vh;
+        padding: 0px 1vh 0.5vh 1vh;
+        margin-bottom: 10px
+    }
+
+    .styStatus {
+        color: #000000;
+        font-size: 3vh;
+        font-weight: 700;
+        height: 6vh;
+        margin: 0px;
+        align-content: center
+    }
+
+    .labelStyle {
+        font-size: 2vh;
+        font-weight: bold;
+        text-align: right;
+    }
+
+    .gaugeVal {
+        width: 100%;
+        font-family: Arial, Verdana, Helvetica, sans-serif;
+        font-size: 4.8vh;
+        font-weight: bold;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        color: #555;
+    }
+
+    .labelStyle1 {
+        font-size: 2vh;
+        font-weight: bold;
+        text-align: right;
+    }
+
+    .inputStyle {
+        padding: 0.5vh;
+        font-size: 4vh;
+        text-align: center;
+        width: 90%;
+        font-weight: 700;
+        background-color: #012060;
+        color: white
+    }
+
+    .rowStyle {
+        align-items: center;
+        display: flex;
+        padding-top: 1.5vh;
+    }
+
+    .inputStyle1 {
+        padding: 0.5vh;
+        font-size: 2.5vh;
+        text-align: center;
+        width: 100%;
+        font-weight: 700;
+        background-color: #012060;
+        color: white
+    }
+
+    .inputTime {
+        padding: 0.5vh;
+        font-size: 2vh;
+        text-align: center;
+        width: 100%;
+        font-weight: 700;
+        background-color: #012060;
+        color: white
+    }
+
+    .rowStyle1 {
+        align-items: center;
+        display: flex;
+        margin-bottom: 1.5vh;
+    }
+
+    .hidden-scrollbar {
+        overflow-y: scroll; /* Enable scrolling */
+        overflow: hidden; /* Fallback for older browsers */
+    }
+
+    .boxShawOb {
+        height: 100%;
+        align-content: center;
+        background-color: #fff;
+        box-shadow: 3px 3px 1px #979797
+    }
+
+    .boxShawBottom {
+        height: 100%;
+        background-color: #fff;
+        box-shadow: 3px 3px 1px #979797
+    }
+
+    .styPerformen {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    body {
+        overflow-y: hidden;
+    }
+
+    .inputStop {
+        text-align: center;
+        font-size: 3.2vh;
+        font-weight: bold;
+    }
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<div id="page" class="table-responsive hidden-scrollbar" style="background-color: white;">
+    <div class="row-fluid" style="overflow: hidden; height: 12vh">
+        <div id="img" class="col-lg-2 col-xs-2" style="padding: 1.5vh">
+            <img src="/Graphics/Avani/logo.png" class="img-responsive">
+        </div>
+        <div class="col-lg-8 col-xs-8 titleCenter">
+            <div>
+                <p class="header-center" style="color: #0100bc; font-size: 2.8vh; font-weight: bold; margin: 0 0 0px"><span id="tlLine">LINE_NAME</span></p>
+                <p id="tlProductCode" class="header-center" style="color: #0100bc; font-size: 2.4vh; font-weight: bold; margin: 0 0 0px"><span id="tlProductCode">PRODUCT_CODE</span></p>
+                <p id="lbl_ProductName" class="header-center" style="color: #0100bc; font-size: 2.4vh; font-weight: bold; margin: 0 0 0px"><span id="lbl_ProductName">PRODUCT_NAME</span></p>
+            </div>
+        </div>
+        <div class="col-lg-2 col-xs-2 titleCenter">
+            <div style="border: 1px solid #000;padding: 5px 15px 5px 15px;border-radius: 5px;">
+                <div style="text-align:center;">
+                    <p class="dayPetro" style="margin: 0 0 0px; font-size: 3.1vh;" id="lbl_TimeNow"></p>
+                    
+                    <p class="dayPetro" style="margin: 0 0 0px" id="lbl_DateNow"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="headerStatus">
+        <div style="position: relative;">
+            <div id="tdStart" style="background-color: #fff; padding: 0px; position: absolute; width: 100%">
+                
+                <p id="statusValve" style="color:#000000; background-color: #1111efcc; margin: 0px; padding-bottom: 6vh"></p>
+            </div>
+            <div style="position: absolute; width: 100%; text-align: center; border: 1px solid #ddd; box-shadow: 3px 3px 1px #979797 ">
+                <p id="statusText" class="styStatus">DỪNG</p>
+            </div>
+        </div>
+    </div>
+
+    <div style="height: 81vh; padding: 1vh 1.5vh 0vh 1.5vh; background-color: #012060; ">
+        <div class="row" style="height: 39vh;">
+            <div class="col-md-7 row" style="height: 100%">
+                <div class="col-md-6 " style="height: 100%; padding-left: 0.3vh">
+                    <div class="boxShawOb">
+                        <div class="row rowStyle">
+                            <label tkey="lbl_CURRENT_PLAN" class="col-md-6 labelStyle">KẾ HOẠCH</label>
+                            <div class="col-md-6 ">
+                                <input id="lbl_CURRENT_PLAN" class="inputStyle" disabled />
+                            </div>
+                        </div>
+                        <div class="row rowStyle">
+                            <label tkey="lbl_TAKTTIME" class="col-md-6 labelStyle">TG TIÊU CHUẨN (S)</label>
+                            <div class="col-md-6 ">
+                                <input id="lbl_TAKTTIME" class="inputStyle" disabled />
+                            </div>
+                        </div>
+                        <div class="row rowStyle">
+                            <label tkey="lbl_HEADCOUNT" class="col-md-6 labelStyle">NHÂN LỰC</label>
+                            <div class="col-md-6 ">
+                                <input id="lbl_HEADCOUNT" class="inputStyle" disabled />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 " style="height: 100%;">
+                    <div class="boxShawOb">
+                        <div class="row rowStyle">
+                            <label tkey="lbl_TARGET" class="col-md-6 labelStyle">MỤC TIÊU</label>
+                            <div class="col-md-6 ">
+                                <input id="lbl_TARGET" class="inputStyle" disabled />
+                            </div>
+                        </div>
+                        <div class="row rowStyle">
+                            <label tkey="lbl_ACTUAL" class="col-md-6 labelStyle">THỰC TẾ</label>
+                            <div class="col-md-6 ">
+                                <input id="lbl_ACTUAL" class="inputStyle" disabled />
+                            </div>
+                        </div>
+                        <div class="row rowStyle">
+                            <label tkey="lbl_DELTA" id="icon_Delta" class="col-md-6 labelStyle" style="font-size: 4vh">
+                                <i class="fas fa-caret-down"></i>
+                            </label>
+                            <div class="col-md-6 ">
+                                <input id="lbl_DELTA" class="inputStyle" disabled />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row col-md-5" style="height: 100%">
+                <div class=" row " style="background-color: white; margin-left: 0.7vh; margin-right: -2.4vh; box-shadow: 3px 3px 1px #979797;height:100%; ">
+                    <div class="col-md-6 styPerformen">
+                        <p tkey="lbl_PERFORMANCE_CODE" class="col-md-12 labelStyle" style="margin-left: -0.5vh;text-align:center">HIỆU SUẤT <br> (Mã SP)</p>
+                        <div class="col-md-12" style="display: flex; justify-content: center; align-items: center; width: 30vh; height: 30vh ">
+                            <div id="gaugeCode" style="width: 100%; height: 100%"></div>
+                            <div id="valCode" class="gaugeVal"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 styPerformen">
+                        <p tkey="lbl_PERFORMANCE_LINE" class="col-md-12 labelStyle" style="margin-left: -0.2vh;text-align:center">HIỆU SUẤT <br> (DÂY CHUYỀN)</p>
+                        <div class="col-md-12" style="display: flex; justify-content: center; align-items: center; width: 30vh; height: 30vh ">
+                            <div id="gaugeLine" style="width: 100%; height: 100%"></div>
+                            <div id="valLine" class="gaugeVal"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="height: 39vh; padding-top: 1vh">
+            <div class="col-md-6" style="height: 100%; margin-left: -10px;">
+                <div class="boxShawBottom">
+                    <div style="text-align:center;">
+                        <p tkey="lbl_LINE_STATUS" style="font-size: 3vh; font-weight: 700; color: #001558 "> TÌNH TRẠNG DÂY CHUYỀN</p>
+                    </div>
+                    <div style="padding: 0px 1vh 0px 1vh">
+                        <table class="table" style="height:100%;">
+                            <thead>
+                                <tr>
+                                    <td align="center">Giờ chạy</td>
+                                    <td align="center">Mã SP</td>
+                                    <td align="center">Nhân lực</td>
+                                    <td align="center">Hoàn thành</td>
+                                    <td align="center">Hiệu suất</td>
+                                    <td align="center">Sản lượng</td>
+                                    <td align="center">Trạng thái</td>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3" style="height: 100%;">
+                <div class="boxShawBottom ">
+                    <div>
+                        <div style="text-align:center;">
+                            <p tkey="lbl_TIME_STATUS" style="font-size: 3vh; font-weight: 700; color: #ff0000 ">CHI TIẾT THỜI GIAN CHẠY:</p>
+                            <div id="TimeStatus" class="col-md-12" style="height: 100%; align-content:center "></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3" style="height: 100%;">
+                <div class="boxShawBottom" style="margin-right:-2.1vh">
+                    <div style="text-align:center;">
+                        <p tkey="lbl_STOP_TIME" style="font-size: 3vh; font-weight: 700; color: #ff0000 ">CHI TIẾT THỜI GIAN DỪNG:</p>
+                        <div id="StopTime" class="col-md-12" style="height: 100%; align-content:center "></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Nhập thông tin mật khẩu</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="alert alert-danger" role="alert" style="display: none">
+                        <p id="alertMess"></p>
+                    </div>
+                    <form>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="Pass" placeholder="Nhập password">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                    <button type="button" id="btnLoadData" class="btn btn-primary">Đăng nhập</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="d-none">
+    <label id="lbl_Code" tkey="lbl_Code" class="d-none">90</label>
+    <label id="lbl_line" tkey="lbl_line" class="d-none">90</label>
+    <label id="lbl_TimeLap" tkey="lbl_TimeLap" class="d-none">15</label>
+    <label id="ERROR_PASS" tkey="LBL_REPORT_TANK_LastDay" class="d-none">Sai mật khẩu mời bạn nhập lại</label>
+    <label id="CHECK_PASS" tkey="LBL_CHECK_PASS" class="d-none">true</label>
+</div>
+
+<script type="text/javascript">
+    var model = kendo.observable({
+        checkPass: true,
+        password: "",
+        listValve: [],
+        checkStatus: 0,
+        minCount: 1,
+        status_color: ""
+    });
+    $("#img").click(function () {
+        const pageKV1 = document.querySelector("#page");
+        const rfs = pageKV1.requestFullscreen || pageKV1.webkitRequestFullScreen || pageKV1.mozRequestFullScreen || pageKV1.msRequestFullscreen;
+        rfs.call(pageKV1);
+    });
+    let LineId = $.fn.Request("LineId");
+    const loadData = (isEmpty) => {
+        var pass = $("#Pass").val();
+        $.post("/Mes_Msg_Statistic/Load_Msg_Line",
+            {
+                LineId: LineId,
+                checkPass: false,
+                password: pass,
+            }
+        ).done(function (result) {
+            let rs = null;
+            try { rs = JSON.parse(result); } catch (ex) { }
+            if (rs !== null && rs !== undefined) {
+                if (rs.ID === 0) {
+                    model.set("checkPass", false);
+                    localStorage.setItem('checkLogin', true);
+                    $('#exampleModal').modal('hide');
+                    var rsss = rs.DATA;
+                    tblLine(rsss.MES_MSG_LINE);
+                    tblLineProduct(rsss.MES_MSG_LINE_DETAIL);
+                    tblLineStop(rsss.MES_MSG_LINE_WORKING);
+                } else {
+                    var message = `${$(`#${rs.EXCEPTION_MESSAGE}`)[0].innerHTML}`;
+                    $(".alert").show();
+                    setTimeout(function () {
+                        $(".alert").hide();
+                    }, 10000);
+                    alertMess.innerHTML = message;
+                }
+
+
+            }
+        }).fail(function () { });
+    }
+    function convertIntoMony(numberInput) {
+        const numberValue = parseFloat(numberInput); // Get the number value from the input
+
+        // Format the number as VND using toLocaleString()
+        const formattedNumber = numberValue.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
+        const numberWithoutSymbol = formattedNumber.replace('₫', '');
+
+        return numberWithoutSymbol;
+    }
+
+    function tblLine(dt) {
+        var item = dt[0];
+        const svgUpArrow = '<svg width="42" height="42" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 8l-6 6h12l-6-6z"/></svg>';
+        const svgDownArrow = '<svg width="42" height="42" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 16l-6-6h12l-6 6z"/></svg>';
+
+        $("#tlLine").html(item.LINE_NAME);
+        $("#tlProductCode").html(item.PRODUCT_CODE);
+        $("#lbl_ProductName").html(item.PRODUCT_NAME);
+        $("#statusText").html(item.statusText);
+        $("#lbl_HEADCOUNT").val(convertIntoMony(item.HEAD_COUNT));
+        $("#lbl_TAKTTIME").val(convertIntoMony(item.TAKT_TIME));
+        $("#lbl_CURRENT_PLAN").val(convertIntoMony(item.PLAN_QUANTITY));
+        $("#lbl_TARGET").val(convertIntoMony(item.TARGET_QUANTITY));
+        $("#lbl_ACTUAL").val(convertIntoMony(item.ACTUAL_QUANTITY));
+        $("#lbl_DELTA").val(convertIntoMony(item.DELTA));
+        $("#icon_Delta").html("");
+
+        document.title = `iAndon - Smart Production Monitoring`; // TOTA - Công Nghệ Khí Hóa Sinh Khối
+        //setFavicon("../Graphics/Avani/logo_mini.png");
+
+        if (convertIntoMony(item.DELTA) < 0) {
+            $("#icon_Delta").html(svgDownArrow);  // Display up arrow SVG
+            $("#lbl_DELTA").css({
+                "background-color": "#ff0000",
+            });
+        } else if (parseFloat(item.DELTA) > 0) {
+            $("#icon_Delta").html(svgUpArrow);  // Display down arrow SVG
+            $("#lbl_DELTA").css({
+                "background-color": "#008000",
+            });
+        } else {
+            $("#icon_Delta").html(svgUpArrow);  // Default to down arrow SVG for zero
+            $("#lbl_DELTA").css({
+                "background-color": "#012060",
+            });
+        }
+
+
+        drawEfficiency(item.TARGET_RATE, item.TOTAL_TARGET_RATE);
+        $("#statusText").text(item.EVENTDEF_NAME_VN);
+        $("#statusValve").css({ "background-color": item.EVENTDEF_COLOR });
+        $("#statusText").css({ "color": "#ffffff" });
+
+        if (item.EVENTDEF_ID === "1") {
+            if (model.checkStatus !== "1") {
+                drawHeaderLine(dt);
+            }
+            model.set("checkStatus", "1");
+        } else if (item.EVENTDEF_ID === "2") {
+            $("#statusValve").css({ "width": "100%" });
+            model.set("checkStatus", "0");
+            if (model.interval) {
+                clearInterval(model.interval);
+            }
+        } else {
+            $("#statusValve").css({ "width": "100%" });
+            model.set("checkStatus", "0");
+            if (model.interval) {
+                clearInterval(model.interval);
+            }
+        }
+    }
+
+
+    function tblLineProduct(dt) {
+        var str = "";
+        var bg = "";
+        for (var i = 0; i < dt.length; i++) {
+            var item = dt[i];
+            bg = "";
+            if (item.STATUS == 2) {
+                bg += "background-color: rgb(0, 128, 0);color:white;";
+            }
+            str += "<tr>";
+            str += `<td align="center" style="${bg}">` + formatTime(new Date(Date.parse(item.STARTED))) + '-' + formatTime(new Date(Date.parse(item.FINISHED))) + '</td>';
+            str += `<td align="center" style="${bg}">` + item.PRODUCT_CODE + '</td>';
+            str += `<td align="center" style="${bg}">` + item.HEAD_COUNT + '</td>';
+            str += `<td align="center" style="${bg}">` + item.PLAN_RATE + '%</td>';
+            str += `<td align="center" style="${bg}">` + item.TARGET_RATE.toFixed() + '%</td>';
+            str += `<td align="center" style="${bg}">` + item.ACTUAL_QUANTITY + '/' + item.PLAN_QUANTITY + '</td>';
+            str += `<td align="center" style="${bg}">` + item.STATUS_NAME + '</td>';
+            str += "</tr>";
+        }
+        $("tbody").html(str);
+    }
+    function formatTime(dateObject) {
+        const hours = String(dateObject.getHours()).padStart(2, '0');
+        const minutes = String(dateObject.getMinutes()).padStart(2, '0');
+        return `${hours}:${minutes}`;
+    }
+
+    function tblLineStop(dt) {
+        var strItem = "";
+        $("#StopTime").html("");
+        let stop = dt.filter(x => x.EVENTDEF_ID == 2);
+        let total_stop = dt.filter(x => x.EVENTDEF_ID == 2 && x.REASON_ID == "");
+        for (var i = 0; i < stop.length; i++) {
+            var item = stop[i];
+            let color = item.EVENTDEF_COLOR;
+            if (color == "") {
+                color = total_stop[0].EVENTDEF_COLOR;
+            }
+            if (item.REASON_ID != "") {
+                strItem += `<div class="row " style="align-items: center; display: flex; margin-bottom: 0.5vh;">
+                                <label class="col-md-5 labelStyle">${item.EVENTDEF_NAME_VN}</label>
+                                <div class="col-md-5 ">
+                                    <input class="inputStop" disabled value="${convertIntToDateTime(parseInt(item.DURATION) * 1000)}" style="background-color: ${color};color:white;width:100%;"/>
+                                </div>
+                                </div>
+                            `;
+            }
+            $("#StopTime").html(strItem);
+        }
+        var strTime = "";
+        $("#TimeStatus").html("");
+        let time = dt.filter(x => x.REASON_ID == "");
+        for (var i = 0; i < time.length; i++) {
+            var item = time[i];
+            if (Number(item.EVENTDEF_ID) == 0) {
+                strTime += `<div class="row " style="align-items: center; display: flex;margin-bottom: 0.5vh">
+                    <label class="col-md-5 labelStyle">${item.EVENTDEF_NAME_VN}</label>
+                    <div class="col-md-5">
+                        <input class="inputStop" disabled value="${convertIntToDateTime(parseInt(item.DURATION) * 1000)}" style="background-color: ${item.EVENTDEF_COLOR};width:100%;"/>
+                    </div>
+                    </div>
+                `;
+            }
+            else {
+                strTime += `<div class="row " style="align-items: center; display: flex; margin-bottom: 0.5vh;">
+                    <label class="col-md-5 labelStyle">${item.EVENTDEF_NAME_VN}</label>
+                    <div class="col-md-5 ">
+                        <input class="inputStop" disabled value="${convertIntToDateTime(parseInt(item.DURATION) * 1000)}" style="background-color: ${item.EVENTDEF_COLOR};color:white;width:100%;"/>
+                    </div>
+                    </div>
+                `;
+            }
+            $("#TimeStatus").html(strTime);
+        }
+    }
+    function convertIntToDateTime(milliseconds) {
+        const date = new Date(new Date().setHours(0, 0, 0, milliseconds));
+        const hours = String(date.getHours()).padStart(2, '0');
+        const minutes = String(date.getMinutes()).padStart(2, '0');
+        const seconds = String(date.getSeconds()).padStart(2, '0');
+
+        return `${hours}:${minutes}:${seconds}`;
+    }
+
+    function drawEfficiency(code, lines) {
+        let lbl_code = $("#lbl_Code").text();
+        var rangesCode = "";
+        if (parseInt(code) < parseInt(lbl_code)) {
+            rangesCode = [{
+                from: 0,
+                to: parseInt(code),
+                color: "#ff3030"
+            }]
+        } else if (parseInt(code) >= parseInt(lbl_code) && parseInt(code) < 97) {
+            rangesCode = [{
+                from: 0,
+                to: parseInt(code),
+                color: "#fabe4d"
+            }]
+        }
+        else if (parseInt(code) >= 97) {
+            rangesCode = [{
+                from: 0,
+                to: parseInt(code),
+                color: "#19ff7d"
+            }]
+        }
+        $("#valCode").text(`${Number(code).toFixed()}%`);
+        $("#gaugeCode").kendoRadialGauge({
+            pointer: [],
+            scale: {
+                rangeSize: 35,//To configure the width of range
+                startAngle: 90,
+                endAngle: 450,
+                max: 100,
+                labels: { visible: false },
+                majorTicks: { visible: false },
+                minorTicks: { visible: false },
+                ranges: rangesCode
+            },
+        });
+        let lbl_line = $("#lbl_line").text();
+        var rangesLine = "";
+        if (parseInt(lines) < parseInt(lbl_line)) {
+            rangesLine = [{
+                from: 0,
+                to: parseInt(lines),
+                color: "#ff3030"
+            }]
+        } else if (parseInt(lines) >= parseInt(lbl_line) && parseInt(lines) < 97) {
+            rangesLine = [{
+                from: 0,
+                to: parseInt(lines),
+                color: "#fabe4d"
+            }]
+        }
+        else if (parseInt(lines) >= 97) {
+            rangesLine = [{
+                from: 0,
+                to: parseInt(lines),
+                color: "#19ff7d"
+            }]
+        }
+        $("#valLine").text(`${Number(lines).toFixed()}%`);
+        $("#gaugeLine").kendoRadialGauge({
+            pointer: [],
+            scale: {
+                rangeSize: 35,//To configure the width of range
+                startAngle: 90,
+                endAngle: 450,
+                max: 100,
+                labels: { visible: false },
+                majorTicks: { visible: false },
+                minorTicks: { visible: false },
+                ranges: rangesLine
+            },
+        });
+    }
+
+    var interval = null;
+    function drawHeaderLine(dt) {
+        if (dt) {
+            var item = dt[0];
+            const timeElement = document.getElementById('statusValve');
+            var currentTime = parseInt(item.TAKT_TIME) != 0 ? parseInt(item.TAKT_TIME) : 20; // Thời gian bắt đầu (tính bằng giây)
+            let count = 100 / currentTime;
+            $("#statusText").text(item.EVENTDEF_NAME_VN);
+            $("#statusValve").css({ "background-color": item.EVENTDEF_COLOR, });
+            interval = setInterval(() => {
+                currentTime--;
+                model.set("minCount", currentTime);
+                var width = currentTime * count; // Tính toán chiều rộng thanh màu sắc
+                timeElement.style.width = width + '%';
+
+                if (model.minCount == 0) {
+                    currentTime = parseInt(item.TAKT_TIME);
+                    width = currentTime * count;
+                    timeElement.style.width = width + '%';
+                    model.set("minCount", 1);
+                }
+            }, 1000);
+            model.set("interval", interval);
+        }
+    }
+
+    $(document).ready(() => {
+
+        drawHeaderLine(null);
+        //if (localStorage.checkLogin) {
+        //    model.set("checkPass", false);
+        //    loadData(true);
+        //} else {
+        //    $('#exampleModal').modal('show');
+        //    $("#btnLoadData").click(function () {
+        //        loadData(true);
+        //    });
+        //}
+
+        loadData();
+        setInterval(function () {
+            // Lấy ngày hiện tại
+            var dateNow = new Date();
+            lbl_TimeNow.innerHTML = dateNow.toLocaleTimeString('en-GB', { hour: "numeric", minute: "numeric", second: "numeric" });
+            lbl_DateNow.innerHTML = dateNow.toLocaleDateString('en-GB');
+        }, 1000);
+
+        setInterval(function () {
+            loadData();
+        }, 3000);
+        function setFavicon(iconPath) {
+            // Find the existing favicon element
+            let favicon = document.querySelector("link[rel~='icon']");
+
+            // If no favicon exists, create one
+            if (!favicon) {
+                favicon = document.createElement("link");
+                favicon.rel = "icon";
+                document.head.appendChild(favicon);
+            }
+
+            // Set the new favicon path
+            favicon.href = iconPath;
+        }
+
+        // Example usage
+        setFavicon("../Graphics/Avani/logo_mini.png");
+    })
+</script>
+            </section>
+        </div>
+    </div>
+    <span id="popupNotification"></span>
+    <script src="/libs/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
+
